@@ -1,0 +1,4 @@
+#
+# Cookbook:: splunk
+# Recipe:: default
+#

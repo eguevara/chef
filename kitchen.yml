@@ -1,0 +1,30 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-16.04
+
+verifier:
+  name: inspec
+
+suites:
+  - name: kubernetes
+    run_list:
+      - recipe[digitalocean::default]
+      - recipe[kubernetes::default]
+    attributes:
+    verifier:
+        inspec_test:
+          - test/integration/kubernetes
+  - name: mesos 
+    run_list:
+      - recipe[digitalocean::default]
+    attributes:
+    verifier:
+        inspec_test:
+          - test/integration/mesos
