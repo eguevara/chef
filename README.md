@@ -17,16 +17,16 @@ Test Kitchen version 1.23.2
 ### cookbook_in_context?
 Module with one method that can be mixen with any class to run cookbook_in_context?
 
-`do/cookbooks/digitialocean/libraries/digitalocean_helper.rb/`
+`chef/cookbooks/digitialocean/libraries/digitalocean_helper.rb/`
 
 # Unit Tests
 Rspec units on the library method.
 
-`do/cookbooks/digitalocean/spec/unit/helper_spec.rb`
+`chef/cookbooks/digitalocean/spec/unit/helper_spec.rb`
 
 #### Usage
 ```
-cd do/
+cd chef/
 make rspec
 ```
 or
@@ -40,24 +40,24 @@ Integration tests using kitchen that validates the recipes on ubuntu-16.04
 
 #### Usage
 ```
-cd do/
+cd chef/
 make kitchen
 ```
 or
 ```
-cd do/
+cd chef/
 kitchen converge && kitchen verify
 ```
 
 # Recipe
 Simple recipe that demonstrates the usage of the helper library to write to /tmp/INSTALL based on cookbook_in_context?
 
-`do/cookbooks/digitalocean/recipes/default.rb`
+`chef/cookbooks/digitalocean/recipes/default.rb`
 
 
 #### Usage
 ```
-cd do/
+cd chef/
 make recipe
 ```
 or
